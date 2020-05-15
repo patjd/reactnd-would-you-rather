@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Dropdown, Card, Image, Container, Divider, Button, Header} from 'semantic-ui-react'
 import { setAuthedUser } from '../actions/authedUser'
+import { Link } from 'react-router-dom'
 
 class Login extends Component {
 
@@ -43,7 +44,7 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </Card.Content>
-          <Button onClick={this.signIn}>Sign In</Button>
+          <Link to='/home'><Button fluid onClick={this.signIn}>Sign In</Button></Link>
         </Card>
       </Container>
     )

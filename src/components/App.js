@@ -3,6 +3,10 @@ import Login from './Login'
 import { handleInitialData } from '../actions/shared';
 import { connect } from 'react-redux'
 import Dashboard from './Dashboard';
+import Poll from './Poll'
+import PollList from './PollList';
+import AnsweringPoll from './AnsweringPoll';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
 
@@ -14,11 +18,11 @@ class App extends Component {
     const { authedUser } = this.props
 
     return (
-      <div>
+      <Router>
         { authedUser === null 
-          ? <Login />
-          : <Dashboard/> }
-      </div>
+          ? <Route exact path='/' component={Login} />
+          : <Route path='/home' component={Dashboard}/> }
+      </Router>
     )
   }
 }

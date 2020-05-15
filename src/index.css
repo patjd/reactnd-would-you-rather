@@ -24,3 +24,8 @@ a > span {
   margin-top: 10px;
   width: 100%;
 }
+
+.answering-poll {
+  width: 500px;
+  margin-top: 50px;
+}
